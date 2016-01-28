@@ -5,13 +5,13 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.LinkedList;
 
-import server.gameroom.DonkeyServerGameRoom;
+import server.gameroom.DonkeyServerGameRooms;
 
 public class DonkeyServerStart {
 	/**
 	 * List of game rooms
 	 */
-	static LinkedList<DonkeyServerGameRoom> serverGameRoomSocket = new LinkedList<DonkeyServerGameRoom>();
+	static LinkedList<DonkeyServerGameRooms> serverGameRoomSocket = new LinkedList<DonkeyServerGameRooms>();
 
 	public static void main(String[] args) {
 		try {
@@ -22,10 +22,11 @@ public class DonkeyServerStart {
 			
 			while(true){
 				Socket newSocket=serverSocketForGameRooms.accept();
-				serverGameRoomSocket.addFirst(new DonkeyServerGameRoom(newSocket));
+				serverGameRoomSocket.addFirst(new DonkeyServerGameRooms(newSocket));
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+			System.out.println("Server is down!");
 		}
 
 	}

@@ -2,11 +2,11 @@ package server.gameroom;
 
 import java.net.Socket;
 
-public class DonkeyServerGameRoom extends Thread {
+public class DonkeyServerGameRooms extends Thread {
 	
 	Socket socketForThisGameRoom;
 
-	public DonkeyServerGameRoom(Socket socketForThisGameRoom) {
+	public DonkeyServerGameRooms(Socket socketForThisGameRoom) {
 		super();
 		this.socketForThisGameRoom = socketForThisGameRoom;
 	}
