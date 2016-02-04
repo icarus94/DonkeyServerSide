@@ -18,6 +18,8 @@ public class DonkeyServerStart {
 			/**
 			 * Open server socket for listening
 			 */
+			
+			
 			ServerSocket serverSocketForGameRooms = new ServerSocket(13413);
 			
 			while(true){
