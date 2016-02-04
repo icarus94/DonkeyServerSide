@@ -1,4 +1,4 @@
-package server.gameAI;
+package server.game.AI;
 
 import java.util.LinkedList;
 
